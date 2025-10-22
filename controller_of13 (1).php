@@ -436,7 +436,7 @@ while (true) {
 
                                 if (!isset($topology[$key])) {
                                     $topology[$key] = time();
-                                    echo "✅ Discovered link: " . dechex($src_dpid) . ":" . $src_port . " --> " . dechex($dst_dpid) . "\n";
+                                    echo "Discovered link: " . dechex($src_dpid) . ":" . $src_port . " --> " . dechex($dst_dpid) . "\n";
                                     prune_topology($topology, 20);
                                     save_topology_json($topology, $TOPO_JSON);
                                 }
@@ -473,3 +473,4 @@ while (true) {
         $last_tick = $now;
     }
 }
+
