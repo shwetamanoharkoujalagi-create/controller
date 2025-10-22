@@ -415,7 +415,7 @@ while (true) {
                 $eth = parse_packet_in_v13_extract_eth($payload);
 
                 if ($eth === null) {
-                    echo "⚠ DEBUG: parse_packet_in_v13_extract_eth() returned NULL\n";
+                    echo "DEBUG: parse_packet_in_v13_extract_eth() returned NULL\n";
                 } else {
                     $eth_len = strlen($eth);
                     echo "DEBUG: Ethernet frame length=$eth_len\n";
@@ -441,11 +441,11 @@ while (true) {
                                     save_topology_json($topology, $TOPO_JSON);
                                 }
                             } else {
-                                echo "⚠ LLDP parse failed (src_dpid or src_port null)\n";
+                                echo "LLDP parse failed (src_dpid or src_port null)\n";
                             }
                         }
                     } else {
-                        echo "⚠ DEBUG: Ethernet frame too short ($eth_len bytes)\n";
+                        echo "DEBUG: Ethernet frame too short ($eth_len bytes)\n";
                     }
                 }
             }
@@ -473,4 +473,5 @@ while (true) {
         $last_tick = $now;
     }
 }
+
 
